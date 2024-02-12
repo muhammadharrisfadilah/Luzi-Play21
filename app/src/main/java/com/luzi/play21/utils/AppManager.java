@@ -3,7 +3,7 @@
  * Created at: February 2, 2024
  * Author: muhammad harris fadilah
  */
-package com.luzi.play21;
+package com.luzi.play21.utils;
 
 import android.app.Activity;
 import java.util.ArrayList;

@@ -3,12 +3,15 @@
  * Created at: February 6, 2024
  * Author: muhammad harris fadilah
  */
-package com.luzi.play21;
+package com.luzi.play21.viewmodels;
 
 import android.content.pm.ActivityInfo;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebChromeClient;
+
+import com.luzi.play21.utils.AppManager;
+
 import java.util.Objects;
 
 public final class FullScreenHandler extends WebChromeClient {

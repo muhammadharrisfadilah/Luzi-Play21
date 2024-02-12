@@ -3,7 +3,7 @@
  * Created at: February 1, 2024
  * Author: muhammad harris fadilah
  */
-package com.luzi.play21;
+package com.luzi.play21.helper;
 
 public class HomeUrl {
     static String url = "https://play21.tigoals32.com/";

@@ -13,7 +13,7 @@
  */
 
 
-package com.luzi.play21;
+package com.luzi.play21.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -22,6 +22,13 @@ import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.luzi.play21.utils.BaseActivity;
+import com.luzi.play21.helper.CustomWebViewClient;
+import com.luzi.play21.helper.HomeUrl;
+import com.luzi.play21.viewmodels.HyWebView;
+import com.luzi.play21.R;
+
 import java.util.Timer;
 import java.util.TimerTask;
 

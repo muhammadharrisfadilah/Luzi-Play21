@@ -3,13 +3,11 @@
  * Created at: February 3, 2024
  * Author: muhammad harris fadilah
  */
-package com.luzi.play21;
+package com.luzi.play21.utils;
 
-import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Stack;

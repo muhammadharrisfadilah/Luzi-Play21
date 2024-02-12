@@ -3,13 +3,15 @@
  * Created at: February 1, 2024
  * Author: muhammad harris fadilah
  */
-package com.luzi.play21;
+package com.luzi.play21.viewmodels;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import com.luzi.play21.helper.AppUtil;
 
 public class HyWebView extends WebView {
 
