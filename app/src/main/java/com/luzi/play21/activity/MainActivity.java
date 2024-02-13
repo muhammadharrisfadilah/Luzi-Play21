@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity implements BaseActivity.ExitConfi
         if (hyWebView.canGoBack()) {
             hyWebView.goBack();
         } else {
-            super.onBackPressed();
+            showExitConfirmation();
         }
     }
 
