@@ -26,16 +26,17 @@ jobs:
           
       - name: Define Commit Messages
         run: |
-          arr=("feat(bot): 🚀 add new feature"
-               "fix(bot): 🛠 fix bug"
-               "docs(bot): 📝 update documentation"
-               "style(bot): 💅 improve code style"
-               "refactor(bot): 🛠 refactor code"
-               "test(bot): ✅ add tests"
-               "chore(bot): 🧹 clean up code"
-               "ci(bot): 🛠 update CI configuration"
-               "perf(bot): ⚡️ improve performance"
-               "build(bot): 🏗️ update build configuration")
+         arr=("feat(bot): 🚀 add new feature"
+         "fix(bot): 🛠 fix bug"
+         "docs(bot): 📝 update documentation"
+         "style(bot): 💅 improve code style"
+         "refactor(bot): 🛠 refactor code"
+         "test(bot): ✅ add tests"
+         "chore(bot): 🧹 clean up code"
+         "ci(bot): 🛠 update CI configuration"
+         "perf(bot): ⚡️ improve performance"
+         "build(bot): 🏗️ update build configuration")
+
           
       - name: Commit changes
         run: |
