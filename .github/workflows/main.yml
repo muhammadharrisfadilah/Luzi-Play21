@@ -50,8 +50,8 @@ jobs:
         run: |
          git pull origin main
          git push origin main
-         uses: ad-m/github-push-action@v0.6.0
+         uses: ad-m/github-push-action@master
          with:
           force: true
           directory: "."
-          github_token: ${{ secrets.MY_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
