@@ -16,33 +16,33 @@ jobs:
         run: echo "::debug::Ref = ${{github.ref}}"
       - uses: actions/checkout@v3      
         with:
-         persist-credentials: false
-         fetch-depth: 0
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Modify last update
         run: |
           d=`date '+%Y-%m-%dT%H:%M:%SZ'`
           echo $d > LAST_UPDATED
           
+      - name: Define Commit Messages
+        run: |
+          arr=("feat(bot): 🚀 add new feature"
+               "fix(bot): 🛠 fix bug"
+               "docs(bot): 📝 update documentation"
+               "style(bot): 💅 improve code style"
+               "refactor(bot): 🛠 refactor code"
+               "test(bot): ✅ add tests"
+               "chore(bot): 🧹 clean up code"
+               "ci(bot): 🛠 update CI configuration"
+               "perf(bot): ⚡️ improve performance"
+               "build(bot): 🏗️ update build configuration")
+          
       - name: Commit changes
         run: |
           git config --local user.email "harris030999@gmail.com"
           git config --local user.name "harris"
           git add -A
-          
-          arr[0]="feat(bot): 🚀 add new feature"
-          arr[1]="fix(bot): 🛠 fix bug"
-          arr[2]="docs(bot): 📝 update documentation"
-          arr[3]="style(bot): 💅 improve code style"
-          arr[4]="refactor(bot): 🛠 refactor code"
-          arr[5]="test(bot): ✅ add tests"
-          arr[6]="chore(bot): 🧹 clean up code"
-          arr[7]="ci(bot): 🛠 update CI configuration"
-          arr[8]="perf(bot): ⚡️ improve performance"
-          arr[9]="build(bot): 🏗️ update build configuration"
-          
           rand=$[$RANDOM % ${#arr[@]}]
-          
           git commit -m "${arr[$rand]}"
           
       - name: GitHub Push
