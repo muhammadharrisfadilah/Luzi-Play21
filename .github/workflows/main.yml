@@ -38,6 +38,7 @@ jobs:
          "perf(bot): ⚡️ improve performance"
          "build(bot): 🏗️ update build configuration"
          )
+         echo "::set-output name=commit_messages::${arr[*]}"
 
 
           
@@ -46,6 +47,7 @@ jobs:
           git config --local user.email "harris030999@gmail.com"
           git config --local user.name "harris"
           git add -A
+          arr=("${{ steps.define_commit_messages.outputs.commit_messages }}")
           rand=$[$RANDOM % ${#arr[@]}]
           git commit -m "${arr[$rand]}"
           
