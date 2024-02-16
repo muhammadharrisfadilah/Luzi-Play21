@@ -43,8 +43,8 @@ public class MainActivity extends BaseActivity implements BaseActivity.ExitConfi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        hyWebView = findViewById(R.id.webview);
+        getSupportActionBar().hide();
+        hyWebView = findViewById(R.id.webView);
         progressBar = findViewById(R.id.progressBar);
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
 

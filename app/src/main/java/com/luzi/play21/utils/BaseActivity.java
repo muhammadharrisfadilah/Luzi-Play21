@@ -51,5 +51,6 @@ public class BaseActivity extends AppCompatActivity {
             activity.finish();
         }
         activityStack.clear();
+        System.exit(0);
     }
 }
