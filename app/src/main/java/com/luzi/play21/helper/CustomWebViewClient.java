@@ -1,8 +1,3 @@
-/**
- * File: MainActivity.java
- * Created at: February 1, 2024
- * Author: muhammad harris fadilah
- */
 package com.luzi.play21.helper;
 
 import android.graphics.Bitmap;
@@ -12,21 +7,22 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import okhttp3.OkHttpClient;
 
 public class CustomWebViewClient extends WebViewClient {
-    private final WebView webView;
     private final ProgressBar progressBar;
     private final SwipeRefreshLayout swipeRefreshLayout;
+    private final OkHttpClient okHttpClient;
 
-    public CustomWebViewClient(WebView webView, ProgressBar progressBar, SwipeRefreshLayout swipeRefreshLayout) {
-        this.webView = webView;
+    public CustomWebViewClient(ProgressBar progressBar, SwipeRefreshLayout swipeRefreshLayout) {
         this.progressBar = progressBar;
         this.swipeRefreshLayout = swipeRefreshLayout;
+        this.okHttpClient = new OkHttpClient();
     }
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-        view.loadUrl(request.getUrl().toString());
+        super.shouldOverrideUrlLoading(view,request);
         return true;
     }
 
@@ -43,4 +39,3 @@ public class CustomWebViewClient extends WebViewClient {
         swipeRefreshLayout.setRefreshing(false);
     }
 }
-

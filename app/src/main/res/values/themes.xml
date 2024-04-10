@@ -19,10 +19,14 @@
     </style>
 
     <style name="App" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:windowBackground">@color/white</item>
-        <item name="colorAccent">@color/hy_accent_blue</item>
-        <item name="colorPrimary">@color/hy_light_blue</item>
+        <item name="android:windowBackground">@color/hy_dark_blue</item>
+        <item name="colorAccent">@color/hy_dark_blue</item>
+        <item name="colorPrimary">@color/hy_dark_blue</item>
         <item name="colorPrimaryDark">@color/hy_dark_blue</item>
+    </style>
+
+    <style name="WebView" parent="@style/App">
+        <item name="android:windowBackground">@color/hy_dark_blue</item>
     </style>
 
     <style name="Welcome" parent="@style/Theme.AppCompat.DayNight.NoActionBar">

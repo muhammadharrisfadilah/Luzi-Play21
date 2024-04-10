@@ -1,42 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:layout_height="match_parent">
+    <com.luzi.play21.viewmodels.OnlyVerticalSwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
+        android:background="@color/hy_dark_blue"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:layout_height="match_parent">
 
             <com.luzi.play21.viewmodels.HyWebView
                 android:id="@+id/webView"
+                android:background="@color/hy_dark_blue"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 />
-            <ProgressBar
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:id="@+id/progressBar"
-            android:progressTint="@color/hy_dark_blue"
-            android:visibility="visible" />
 
-        </RelativeLayout>
+    </com.luzi.play21.viewmodels.OnlyVerticalSwipeRefreshLayout>
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:progressTint="@color/hy_dark_blue"
+        android:visibility="visible" />
 
-
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

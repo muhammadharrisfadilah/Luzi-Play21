@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- New permissions for Android 13+ -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.READ_MEDIA_IMAGES"
         android:minSdkVersion="33" />
@@ -25,7 +25,7 @@
         android:theme="@style/App"
         tools:targetApi="31">
         <activity
-            android:theme="@style/App"
+            android:theme="@style/Welcome"
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
             android:configChanges="screenSize|orientation|keyboardHidden"
@@ -42,18 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- Intent filter added to handle specific URLs -->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.VIEW" />-->
-
-<!--                <category android:name="android.intent.category.DEFAULT" />-->
-<!--                <category android:name="android.intent.category.BROWSABLE" />-->
-
-<!--                &lt;!&ndash; This data element specifies the URL format to handle &ndash;&gt;-->
-<!--                <data-->
-<!--                    android:host="play21.tigoals30.com/football.html"-->
-<!--                    android:scheme="https" />-->
-<!--            </intent-filter>-->
         </activity>
 
         <provider

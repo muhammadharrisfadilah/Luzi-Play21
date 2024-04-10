@@ -4,9 +4,9 @@
  * Author: muhammad harris fadilah
  */
 package com.luzi.play21.utils;
-
-import android.support.multidex.MultiDexApplication;
 import android.util.Log;
+
+import androidx.multidex.MultiDexApplication;
 
 import com.luzi.play21.helper.AppUtil;
 

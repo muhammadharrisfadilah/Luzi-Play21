@@ -46,7 +46,6 @@ public class HyWebView extends WebView {
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setAllowFileAccess(true);
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
-//        settings.setAppCacheEnabled(true);
 //        settings.setAppCachePath(AppContext.appContext.getDir("production_wv_cache", 0).getPath());
         settings.setDatabaseEnabled(true);
         settings.setUseWideViewPort(true);
@@ -54,8 +53,8 @@ public class HyWebView extends WebView {
         settings.setSupportZoom(false);
         settings.setBuiltInZoomControls(false);
         settings.setDisplayZoomControls(false);
-//        setBackgroundColor(0);
-//        getBackground().setAlpha(0);
+        setBackgroundColor(0);
+        getBackground().setAlpha(0);
 
         // Configure WebViewClient and WebChromeClient
 //        setWebViewClient(new BaseWebViewClient());
@@ -67,6 +66,7 @@ public class HyWebView extends WebView {
         cookieManager.setAcceptCookie(true);
         cookieManager.setAcceptThirdPartyCookies(this, true);
     }
+
 
 //    public CustomWebChromeClient getCustomWebChromeClient() {
 //        return customWebChromeClient;
